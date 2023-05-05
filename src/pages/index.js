@@ -1,48 +1,187 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "components/styles/Home.module.scss";
-import { Animated_text } from "@git-ovidiu/nextjs-component-library";
+import { Animated_text, FAQ_item } from "@git-ovidiu/nextjs-component-library";
 import { Media_component } from "@git-ovidiu/component-library";
+import Media_and_paragraph from "./Organisms/Media-and-paragraph/Media_and_paragraph";
+import styleguide from "../styles/main.module.scss";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
   return (
-    <>
-      <div className={`container-fluid ${styles.banner}`}>
-        <div className="row">
+    <div className={styleguide.styleguide}>
+            <div
+        className="padding_xxl"
+      >
+        <Media_and_paragraph
+          reverse
+          image={
             <Media_component
               autoPlay
               controls
               image={
-                <div className={styles.mediaContainer}>
-                  <Image
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1682261650/header-media-image_ct8h12.webp"
-                    quality={100}
-                    style={{
-                      objectFit: "cover",
-                      overflow: "auto",
-                      objectPosition: "auto",
-                    }}
-                    layout="fill"
-                  />
-                  <div className={styles.animatedText}>
-                    <Animated_text text="OATOPIA" variant="h1" />
-                  </div>
-                </div>
+                <Image
+                  alt="placeholder"
+                  src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1683302522/OvidiuBunghez_diagramic_drawing_of_a_glass_with_oatmilk_on_a_fu_ad6763db-0b39-4326-a90f-f7e506e7c455_1_h2ude7.png"
+                  quality={100}
+                  style={{
+                    objectFit: "cover",
+                    overflow: "auto",
+                    objectPosition: "auto",
+                  }}
+                  layout="fill"
+                />
               }
               loop
               muted
               playsInline
               video=""
             />
-        </div>
+          }
+          content={
+            <div className="white">
+              <Animated_text
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam."
+                variant="h3"
+              />
+            </div>
+          }
+        />
       </div>
-
+      <div
+        className="padding_m"
+      >
+        <Media_and_paragraph
+          image={
+            <Media_component
+              autoPlay
+              controls
+              image={
+                <Image
+                  alt="placeholder"
+                  src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1682275203/before-transformed_sowhjy.png"
+                  quality={100}
+                  style={{
+                    objectFit: "cover",
+                    overflow: "auto",
+                    objectPosition: "auto",
+                  }}
+                  layout="fill"
+                />
+              }
+              loop
+              muted
+              playsInline
+              video=""
+            />
+          }
+          content={
+            <>
+              <h2 className="white">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                officia cumque, facere nemo dolorem illo sequi veniam. 123123"
+              </h2>
+              <div className="faq-container">
+              <>
+                <FAQ_item
+                  arrow={
+                    <svg
+                      fill="none"
+                      height="8"
+                      viewBox="0 0 14 8"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  }
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
+                  title={
+                    <Animated_text
+                      text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
+                      variant="p"
+                    />
+                  }
+                />
+              </>
+              <>
+                <FAQ_item
+                  arrow={
+                    <svg
+                      fill="none"
+                      height="8"
+                      viewBox="0 0 14 8"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  }
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
+                  title={
+                    <Animated_text
+                      text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
+                      variant="p"
+                    />
+                  }
+                />
+              </>
+              </div>
+            </>
+          }
+        />
+      </div>
+      <div
+        className={`${styleguide.padding_top_m} ${styleguide.padding_bottom_m}`}
+      >
+        <Media_and_paragraph
+          reverse
+          image={
+            <Media_component
+              autoPlay
+              controls
+              image={
+                <Image
+                  alt="placeholder"
+                  src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1682273896/chia_seeds_glass_jvzkyi.webp"
+                  quality={100}
+                  style={{
+                    objectFit: "cover",
+                    overflow: "auto",
+                    objectPosition: "auto",
+                  }}
+                  layout="fill"
+                />
+              }
+              loop
+              muted
+              playsInline
+              video=""
+            />
+          }
+          content={
+            <div className="white">
+              <Animated_text
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam."
+                variant="h1"
+              />
+            </div>
+          }
+        />
+      </div>
+      {/* 
       <div className="container">
         <div className={`row ${styles.row}`}>
           <div className={`col-12 col-md-6 ${styles.mediaLeft}`}>
@@ -69,39 +208,23 @@ export default function Home() {
             />
           </div>
           <div className={`col-12 col-sm-6 ${styles.textColumn}`}>
-            <Animated_text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam." variant="h1" />
+            <Animated_text
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam."
+              variant="h1"
+            />
           </div>
         </div>
 
         <div className={`row ${styles.row}`}>
-        <div className={`col-12 col-sm-6 ${styles.textColumn}`}>
-            <Animated_text text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam." variant="h1" />
-          </div>
-          <div className={`col-12 col-md-6 ${styles.mediaLeft}`}>
-            <Media_component
-              autoPlay
-              controls
-              image={
-                <Image
-                  alt="placeholder"
-                  src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1682275203/before-transformed_sowhjy.png"
-                  quality={100}
-                  style={{
-                    objectFit: "cover",
-                    overflow: "auto",
-                    objectPosition: "auto",
-                  }}
-                  layout="fill"
-                />
-              }
-              loop
-              muted
-              playsInline
-              video=""
+          <div className={`col-12 col-sm-6 ${styles.textColumn}`}>
+            <Animated_text
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia cumque, facere nemo dolorem illo sequi veniam."
+              variant="h1"
             />
           </div>
+          <div className={`col-12 col-md-6 ${styles.mediaLeft}`}></div>
         </div>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }

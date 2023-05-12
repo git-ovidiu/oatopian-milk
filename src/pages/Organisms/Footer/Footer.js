@@ -1,9 +1,6 @@
 import {
-  Button_slide,
-  Footer_Card,
   Footer_link,
 } from "@git-ovidiu/nextjs-component-library";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "./Footer.module.scss";

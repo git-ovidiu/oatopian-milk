@@ -20,6 +20,14 @@
   outline: none;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
 body::-webkit-scrollbar{
     display: none;
   }

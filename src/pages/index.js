@@ -1,18 +1,47 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Animated_text, FAQ_item } from "@git-ovidiu/nextjs-component-library";
+import { Animated_text, Button_slide, FAQ_item, Footer_card } from "@git-ovidiu/nextjs-component-library";
 import { Media_component } from "@git-ovidiu/component-library";
 import Media_and_paragraph from "./Organisms/Media-and-paragraph/Media_and_paragraph";
 import styleguide from "../styles/main.module.scss";
-
+import Footer from "./Organisms/Footer/Footer";
 
 export default function Home() {
   return (
     <div className={styleguide.styleguide}>
-            <div
-        className="padding_xxl"
-      >
+      <Footer 
+      footer_card={
+        <Footer_card
+        action={
+          <Button_slide
+            hover_effect="slide-right"
+            iconPosition="right"
+            icon="cacat"
+            text="Placeholder text"
+            padding="xs"
+          />
+        }
+        description={
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sapiente, debitis. Rerum eos, quae expedita maxime labore ipsa
+            nisi iure nam repellendus, mollitia repellat. Assumenda,
+            deleniti!
+          </p>
+        }
+        logo={
+            <Image
+              src="https://via.placeholder.com/160x63/e3e3e3/b38686"
+              alt="Logo Placeholder"
+              width={160}
+              height={60}
+            />
+        }
+      />
+      }
+      />
+      <div className="padding_xxl">
         <Media_and_paragraph
           reverse
           image={
@@ -48,9 +77,7 @@ export default function Home() {
           }
         />
       </div>
-      <div
-        className="padding_m"
-      >
+      <div className="padding_m">
         <Media_and_paragraph
           image={
             <Media_component
@@ -82,67 +109,67 @@ export default function Home() {
                 officia cumque, facere nemo dolorem illo sequi veniam. 123123"
               </h2>
               <div className="faq-container">
-              <>
-                <FAQ_item
-                  arrow={
-                    <svg
-                      fill="none"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      width="14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1L7 7L13 1"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                <>
+                  <FAQ_item
+                    arrow={
+                      <svg
+                        fill="none"
+                        height="8"
+                        viewBox="0 0 14 8"
+                        width="14"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1L7 7L13 1"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    }
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
+                    title={
+                      <Animated_text
+                        text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
+                        variant="p"
                       />
-                    </svg>
-                  }
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
-                  title={
-                    <Animated_text
-                      text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
-                      variant="p"
-                    />
-                  }
-                />
-              </>
-              <>
-                <FAQ_item
-                  arrow={
-                    <svg
-                      fill="none"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      width="14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1L7 7L13 1"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    }
+                  />
+                </>
+                <>
+                  <FAQ_item
+                    arrow={
+                      <svg
+                        fill="none"
+                        height="8"
+                        viewBox="0 0 14 8"
+                        width="14"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1L7 7L13 1"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    }
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
+                    title={
+                      <Animated_text
+                        text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
+                        variant="p"
                       />
-                    </svg>
-                  }
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus ipsa vero dicta nihil voluptas eos omnis? Sit necessitatibus pariatur consequatur temporibus totam maxime tempora iusto animi, ipsa labore facere libero deleniti porro dolore incidunt, nulla ut soluta deserunt! Quia commodi nesciunt doloribus dignissimos enim. Eaque ipsa odio maxime accusantium!"
-                  title={
-                    <Animated_text
-                      text="adfadsfasdfasdfas adsfa sdfasd fasdf ads fa dsf"
-                      variant="p"
-                    />
-                  }
-                />
-              </>
+                    }
+                  />
+                </>
               </div>
             </>
           }
         />
-      </div>
+      </div>£
       <div
         className={`${styleguide.padding_top_m} ${styleguide.padding_bottom_m}`}
       >

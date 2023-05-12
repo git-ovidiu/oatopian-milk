@@ -18,7 +18,7 @@ export default function Footer(props) {
       </div>
     </div>
       //123
-      //123
+      //123 123
       //123 ppp 123
   );
 }

@@ -21,6 +21,5 @@ export default function Footer(props) {
       </div>
     </div>
       // test
-      // test
   );
 }
